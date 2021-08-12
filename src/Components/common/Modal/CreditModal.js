@@ -4,7 +4,7 @@ import Button from "Components/common/Button";
 import Input from "Components/common/Input";
 import MessageBox from "Components/common/MessageBox";
 
-const CreditModal = ({ creditCard, handleSetCardNum, toggleModal }) => {
+const CreditModal = ({ creditCard, setFormData, toggleModal }) => {
   const inputRef = useRef([]);
   const [error, setError] = useState(false);
   const creditCardArray = (!!creditCard && creditCard.split("-")) || "";
@@ -34,7 +34,10 @@ const CreditModal = ({ creditCard, handleSetCardNum, toggleModal }) => {
     const cardNumberToString = cardNumber.join("-");
 
     if (cardNumberLength === 16) {
-      handleSetCardNum(cardNumberToString);
+      setFormData((prev) => ({
+        ...prev,
+        creditCardNum: cardNumberToString,
+      }));
       setError(false);
       toggleModal(true);
     } else {
