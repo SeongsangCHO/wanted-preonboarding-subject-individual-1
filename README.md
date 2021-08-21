@@ -1,4 +1,4 @@
-# 자란다 기업 과제 (Team 7ill Resource)
+# 자란다 기업 과제 (Team 7ill Resource)를 리팩토링 한 과제입니다.
 
 ## [🔗 배포 링크](https://naughty-curie-d72f2a.netlify.app/)
 
